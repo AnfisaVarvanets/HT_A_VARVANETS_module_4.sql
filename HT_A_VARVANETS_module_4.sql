@@ -70,7 +70,6 @@ inner join Vendors
 on Product_Vendors.VendorID =  Vendors.VendorID
 inner join Categories
 on Products.CategoryID=Categories.CategoryID
-
 Order by EmployeeID ASC
 Go
 
@@ -136,7 +135,7 @@ Select row_no + 1 From ROWCTE where row_no<10000
 )
 Select*From ROWCTE 
 Option (maxrecursion 10000)
-
+go
 
 
 
