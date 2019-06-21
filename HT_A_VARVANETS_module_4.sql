@@ -19,7 +19,6 @@ go
 
 
 select Distinct ProductName,CategoryID,RetailPrice
-
 from  Products inner join Order_Details
 on Products.ProductNumber = Order_Details.ProductNumber
 Order by ProductName ASC
