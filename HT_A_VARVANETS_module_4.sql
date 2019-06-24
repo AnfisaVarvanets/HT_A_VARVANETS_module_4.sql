@@ -15,6 +15,9 @@ Go
 select  Distinct Products.CategoryID, CategoryDescription
 from  Products inner join Categories
 on Products.CategoryID = Categories.CategoryID
+inner join Order_Details
+on Products.ProductNumber = Order_Details.ProductNumber
+Order by CategoryID ASC
 go
 
 
