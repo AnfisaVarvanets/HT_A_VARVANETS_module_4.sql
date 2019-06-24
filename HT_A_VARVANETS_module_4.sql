@@ -19,10 +19,13 @@ go
 
 
 select Distinct ProductName,CategoryID,RetailPrice
-from  Products inner join Order_Details
-on Products.ProductNumber = Order_Details.ProductNumber
+from  Products inner join Product_Vendors
+on Products.ProductNumber = Product_Vendors.ProductNumber
+inner join Vendors
+on Product_Vendors.VendorID =  Vendors.VendorID
 Order by ProductName ASC
-Go
+go
+
 
 
 select VendZipCode, VendName
